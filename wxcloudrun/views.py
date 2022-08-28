@@ -25,7 +25,12 @@ def counter(request, _):
 
      `` request `` 请求对象
     """
-
+    banners = [{"linkUrl": "", "picUrl": "https://dcdn.it120.cc/2019/12/29/8396f65d-d615-46d8-b2e5-aa41820b9fe5.png",
+               },{"linkUrl": "", "picUrl": "https://dcdn.it120.cc/2019/12/29/daca65ee-4347-4792-a490-ccbac4b3c1d7.png",
+               },{"linkUrl": "", "picUrl": "https://dcdn.it120.cc/2019/12/29/2e79921a-92b3-4d1d-8182-cb3d524be5fb.png",
+               }]
+    rsp = JsonResponse({'code': 0, 'data': banners}, json_dumps_params={'ensure_ascii': False})       
+    return rsp        
     rsp = JsonResponse({'code': 0, 'errorMsg': ''}, json_dumps_params={'ensure_ascii': False})
     if request.method == 'GET' or request.method == 'get':
         rsp = get_count()
