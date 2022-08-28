@@ -24,6 +24,7 @@ urlpatterns = (
     # 获取主页
     url(r'(/)?$', views.index),
 
+
     # 获取轮播图
     url(r'^^api/get_banner(/)?$', views.get_banner),
 )
