@@ -26,5 +26,5 @@ urlpatterns = (
 
 
     # 获取轮播图
-    url(r'^^api/get_banner(/)?$', views.get_banner),
+    url(r'^^api/get_banner(/)?$', views.counter),
 )
