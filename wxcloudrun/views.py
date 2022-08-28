@@ -89,3 +89,23 @@ def update_count(request):
     else:
         return JsonResponse({'code': -1, 'errorMsg': 'action参数错误'},
                     json_dumps_params={'ensure_ascii': False})
+
+def get_config():
+    """
+    获取配置信息
+    """
+
+    return JsonResponse({'code': 0, 'data': 1},
+                        json_dumps_params={'ensure_ascii': False})
+
+def get_banner():
+    """
+    获取轮播图信息
+    """
+    banners = [{"linkUrl": "", "picUrl": "https://dcdn.it120.cc/2019/12/29/8396f65d-d615-46d8-b2e5-aa41820b9fe5.png",
+               },{"linkUrl": "", "picUrl": "https://dcdn.it120.cc/2019/12/29/daca65ee-4347-4792-a490-ccbac4b3c1d7.png",
+               },{"linkUrl": "", "picUrl": "https://dcdn.it120.cc/2019/12/29/2e79921a-92b3-4d1d-8182-cb3d524be5fb.png",
+               }]
+
+    return JsonResponse({'code': 0, 'data': banners},
+                        json_dumps_params={'ensure_ascii': False})
