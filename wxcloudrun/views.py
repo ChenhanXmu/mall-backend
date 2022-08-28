@@ -103,7 +103,7 @@ def get_config():
     return JsonResponse({'code': 0, 'data': 1},
                         json_dumps_params={'ensure_ascii': False})
 
-def get_banner():
+def get_banner(request, _):
     """
     获取轮播图信息
     """
